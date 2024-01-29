@@ -18,7 +18,7 @@ public interface AccountService {
 	
 	public void createAccount(Account account)throws SQLException;
 	
-	public void deleteAccount(int id)throws SQLException;
+	public void deleteAccount(int id)throws SQLException, AccountException;
 	
 	public  void updateAccount(Account updateAccount)throws SQLException;
 	

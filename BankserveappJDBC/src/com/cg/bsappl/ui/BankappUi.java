@@ -37,9 +37,14 @@ public static void main(String args[])
 		{
 			case 1:
 			try {
-				adminPage();
+				try {
+					adminPage();
+				} catch (AccountException e) {
+					
+					e.printStackTrace();
+				}
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
+				
 				e.printStackTrace();
 			}
 				break;
@@ -66,7 +71,7 @@ public static void main(String args[])
 	
 }
 
-public static void adminPage() throws SQLException
+public static void adminPage() throws SQLException, AccountException
 {
 	Scanner s1=new Scanner(System.in);
 	while(true)

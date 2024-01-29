@@ -105,7 +105,7 @@ public class AccountServiceImpl implements AccountService {
 	}
 
 	@Override
-	public void deleteAccount(int id) throws SQLException {
+	public void deleteAccount(int id) throws SQLException, AccountException {
 		accountdao.deleteAccount(id);
 		
 	}

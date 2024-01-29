@@ -4,6 +4,7 @@ import java.sql.SQLException;
 
 import com.cg.bsappl.beans.Account;
 //import com.cg.bsappl.beans.Customer;
+import com.cg.bsappl.exception.AccountException;
 
 public interface AccountDAO {
 
@@ -11,7 +12,7 @@ public interface AccountDAO {
 	
 	public void createAccount(Account account) throws SQLException;
 	
-	public void deleteAccount(int id) throws SQLException;
+	public void deleteAccount(int id) throws SQLException, AccountException;
 	
 	public void updateAccount(Account updateAccount) throws SQLException;
 	
